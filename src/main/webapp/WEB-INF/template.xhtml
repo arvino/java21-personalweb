@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><ui:insert name="title">Arvino Zulka - Personal Website</ui:insert></title>
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+        
+        <!-- Custom Styles -->
+        <h:outputStylesheet name="css/style.css" />
+    </h:head>
+
+<h:body>
+    <div class="layout-wrapper">
+        <header class="layout-topbar">
+            <nav class="layout-menu">
+                <h:link outcome="/index" styleClass="menu-item" value="Home" />
+                <h:link outcome="/portfolio" styleClass="menu-item" value="Work Portfolio" />
+                <h:link outcome="/contact" styleClass="menu-item" value="Hubungi Saya" />
+            </nav>
+        </header>
+
+        <main class="layout-content">
+            <p:messages id="messages" showDetail="true" closable="true">
+                <p:autoUpdate />
+            </p:messages>
+            
+            <ui:insert name="content">
+                Content goes here
+            </ui:insert>
+        </main>
+
+        <footer class="layout-footer">
+            <p:divider />
+            <div style="text-align: center; padding: 1rem;">
+                <p>© #{java.time.Year.now().value} Arvino Zulka. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</h:body>
+</html>

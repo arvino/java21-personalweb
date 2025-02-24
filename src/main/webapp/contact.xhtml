@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+    <ui:define name="title">Contact - Arvino Zulka</ui:define>
+    
+    <ui:define name="content">
+        <div class="hero-section">
+            <h1 class="hero-title">Hubungi Saya</h1>
+            <p class="hero-subtitle">Let's discuss your next project</p>
+        </div>
+
+        <div class="p-grid">
+            <div class="p-col-12 p-md-6">
+                <p:panel header="Contact Information" styleClass="p-mb-3">
+                    <div class="p-mb-3">
+                        <p><i class="pi pi-envelope"/> Email: contact@arvinozulka.com</p>
+                        <p><i class="pi pi-phone"/> Phone: +62 123 456 789</p>
+                        <p><i class="pi pi-map-marker"/> Location: Jakarta, Indonesia</p>
+                    </div>
+                    <div>
+                        <h3>Connect with me</h3>
+                        <p:button icon="pi pi-linkedin" styleClass="p-mr-2" style="margin-right: .5rem"/>
+                        <p:button icon="pi pi-github" styleClass="p-mr-2" style="margin-right: .5rem"/>
+                        <p:button icon="pi pi-twitter"/>
+                    </div>
+                </p:panel>
+            </div>
+
+            <div class="p-col-12 p-md-6">
+                <h:form styleClass="contact-form">
+                    <p:panel header="Send Message">
+                        <div class="p-field p-mb-3">
+                            <p:outputLabel for="name" value="Name"/>
+                            <p:inputText id="name" value="#{contactBean.name}" required="true"
+                                       styleClass="p-mb-2" style="width: 100%"/>
+                            <p:message for="name"/>
+                        </div>
+
+                        <div class="p-field p-mb-3">
+                            <p:outputLabel for="email" value="Email"/>
+                            <p:inputText id="email" value="#{contactBean.email}" required="true"
+                                       styleClass="p-mb-2" style="width: 100%"
+                                       validatorMessage="Invalid email format">
+                                <f:validateRegex pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"/>
+                            </p:inputText>
+                            <p:message for="email"/>
+                        </div>
+
+                        <div class="p-field p-mb-3">
+                            <p:outputLabel for="subject" value="Subject"/>
+                            <p:inputText id="subject" value="#{contactBean.subject}" required="true"
+                                       styleClass="p-mb-2" style="width: 100%"/>
+                            <p:message for="subject"/>
+                        </div>
+
+                        <div class="p-field p-mb-3">
+                            <p:outputLabel for="message" value="Message"/>
+                            <p:inputTextarea id="message" value="#{contactBean.message}" required="true"
+                                           rows="5" styleClass="p-mb-2" style="width: 100%"/>
+                            <p:message for="message"/>
+                        </div>
+
+                        <p:commandButton value="Send Message" action="#{contactBean.sendMessage}"
+                                       icon="pi pi-send" styleClass="p-mt-3"
+                                       style="width: 100%"
+                                       update="@form"/>
+                    </p:panel>
+                </h:form>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

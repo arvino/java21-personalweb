@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+    <ui:define name="title">Portfolio - Arvino Zulka</ui:define>
+    
+    <ui:define name="content">
+        <div class="hero-section" style="margin-bottom: 4rem">
+            <h1 class="hero-title">Work Portfolio</h1>
+            <p class="hero-subtitle">Selected projects and achievements</p>
+        </div>
+
+        <div class="portfolio-grid">
+            <p:card styleClass="portfolio-item">
+                <f:facet name="header">
+                    <img src="#{resource['images/project1.jpg']}" alt="E-Commerce Platform" 
+                         style="width: 100%; height: 200px; object-fit: cover;"/>
+                </f:facet>
+                <f:facet name="title">E-Commerce Platform</f:facet>
+                <p>
+                    A full-stack e-commerce solution built with Java and React. 
+                    Features include user authentication, product management, and secure payment processing.
+                </p>
+                <f:facet name="footer">
+                    <p:tag value="Java" severity="info" style="margin-right: .5rem"/>
+                    <p:tag value="Spring Boot" severity="success" style="margin-right: .5rem"/>
+                    <p:tag value="React" severity="warning"/>
+                </f:facet>
+            </p:card>
+
+            <p:card styleClass="portfolio-item">
+                <f:facet name="header">
+                    <img src="#{resource['images/project2.jpg']}" alt="Mobile App" 
+                         style="width: 100%; height: 200px; object-fit: cover;"/>
+                </f:facet>
+                <f:facet name="title">Health Tracking App</f:facet>
+                <p>
+                    A cross-platform mobile application for health and fitness tracking.
+                    Includes real-time data synchronization and personalized workout plans.
+                </p>
+                <f:facet name="footer">
+                    <p:tag value="Flutter" severity="info" style="margin-right: .5rem"/>
+                    <p:tag value="Firebase" severity="warning" style="margin-right: .5rem"/>
+                    <p:tag value="Node.js" severity="success"/>
+                </f:facet>
+            </p:card>
+
+            <p:card styleClass="portfolio-item">
+                <f:facet name="header">
+                    <img src="#{resource['images/project3.jpg']}" alt="Analytics Dashboard" 
+                         style="width: 100%; height: 200px; object-fit: cover;"/>
+                </f:facet>
+                <f:facet name="title">Analytics Dashboard</f:facet>
+                <p>
+                    A modern analytics dashboard with real-time data visualization.
+                    Built with microservices architecture and modern UI components.
+                </p>
+                <f:facet name="footer">
+                    <p:tag value="Microservices" severity="info" style="margin-right: .5rem"/>
+                    <p:tag value="Docker" severity="warning" style="margin-right: .5rem"/>
+                    <p:tag value="Vue.js" severity="success"/>
+                </f:facet>
+            </p:card>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem">
+            <p:button value="View More Projects" icon="pi pi-external-link" styleClass="ui-button-outlined"/>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+    <ui:define name="title">Home - Arvino Zulka</ui:define>
+    
+    <ui:define name="content">
+        <div class="hero-section">
+            <h1 class="hero-title">Arvino Zulka</h1>
+            <p class="hero-subtitle">Software Developer &amp; Technology Enthusiast</p>
+        </div>
+
+        <div class="p-grid">
+            <div class="p-col-12">
+                <p:card style="margin-bottom: 2rem">
+                    <f:facet name="title">
+                        About Me
+                    </f:facet>
+                    <p class="p-m-0" style="line-height: 1.5">
+                        Hello! I'm Arvino Zulka, a passionate software developer with expertise in modern web technologies.
+                        I specialize in creating elegant, efficient, and user-friendly applications that solve real-world problems.
+                    </p>
+                </p:card>
+            </div>
+
+            <div class="p-col-12">
+                <p:card>
+                    <f:facet name="title">
+                        Skills &amp; Expertise
+                    </f:facet>
+                    <div class="p-grid p-fluid">
+                        <div class="p-col-12 p-md-4">
+                            <p:card style="text-align: center">
+                                <i class="pi pi-desktop" style="font-size: 2rem; color: var(--primary-color)"></i>
+                                <h3>Frontend Development</h3>
+                                <p>Creating responsive and intuitive user interfaces</p>
+                            </p:card>
+                        </div>
+                        <div class="p-col-12 p-md-4">
+                            <p:card style="text-align: center">
+                                <i class="pi pi-server" style="font-size: 2rem; color: var(--primary-color)"></i>
+                                <h3>Backend Development</h3>
+                                <p>Building robust and scalable server applications</p>
+                            </p:card>
+                        </div>
+                        <div class="p-col-12 p-md-4">
+                            <p:card style="text-align: center">
+                                <i class="pi pi-mobile" style="font-size: 2rem; color: var(--primary-color)"></i>
+                                <h3>Mobile Development</h3>
+                                <p>Developing cross-platform mobile solutions</p>
+                            </p:card>
+                        </div>
+                    </div>
+                </p:card>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>
