@@ -241,6 +241,4 @@ Common issues and solutions:
    copy C:\java\wildfly-35\standalone\deployments\personal-web.war backup\
    ```
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Development By Arvino Zulka
